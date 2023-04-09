@@ -7,16 +7,16 @@
 
 QUARTIC TEST RESULTS
 
-Max distance: 1e-05
-Total count of tests: 1000000
-Couldn't find roots: 0 times 
+- Max distance: 1e-05
+- Total count of tests: 1000000
+- Couldn't find roots: 0 times 
 
-Average absolute error: 0.00010971
-Total maximum absolute error: 0.0801502
-Average relative error: 0.000223867
-Total maximum relative error: 1.80032
+- Average absolute error: 0.00010971
+- Total maximum absolute error: 0.0801502
+- Average relative error: 0.000223867
+- Total maximum relative error: 1.80032
 
-Total count of lost roots: 0
-Total count of excess roots: 0
+- Total count of lost roots: 0
+- Total count of excess roots: 0
 
-relMaxError > 1: 4 times
+- relMaxError > 1: 4 times
