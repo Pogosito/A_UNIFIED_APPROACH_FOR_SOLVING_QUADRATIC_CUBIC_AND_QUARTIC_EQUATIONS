@@ -234,14 +234,18 @@ unsigned int unifiedApproachForQuartic(fp_t n, fp_t a, fp_t b, fp_t c, fp_t d, v
 	}
 
 	// MARK: Используем round т.к никогда не получаем чистый 0. (Проверка с eps не проходит)
-	if (round(abs(betta_gamma_helper)) <= numeric_limits<fp_t>::epsilon() && cnt_pozitive_T == 3)
-	{
-		numberOfRoots = 4;
-	} else if (betta_gamma_helper > 0) {
-		numberOfRoots = 2;
-	} else if (betta_gamma_helper < 0) {
-		numberOfRoots = cnt_pozitive_T == 3 ? 4 : 0;
-	}
+// 	if (round(abs(betta_gamma_helper)) <= numeric_limits<fp_t>::epsilon() && cnt_pozitive_T == 3)
+// 	{
+// 		numberOfRoots = 4;
+// 	} else if (betta_gamma_helper > 0) {
+// 		numberOfRoots = 2;
+// 	} else if (betta_gamma_helper < 0) {
+// 		numberOfRoots = cnt_pozitive_T == 3 ? 4 : 0;
+// 	}
+	
+	// Исправление
+	numberOfRoots = (round(abs(betta_gamma_helper)) <= numeric_limits<fp_t>::epsilon() && cnt_pozitive_T == 3) ? 4 :
+            (betta_gamma_helper > 0) ? 2 : (cnt_pozitive_T == 3) ? 4 : 0;
 
 	// Провекра условия 4.10
 	int beta0_I = 0;
